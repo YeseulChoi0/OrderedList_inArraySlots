@@ -1,4 +1,4 @@
-public class OrderedList_inArraySlots{
+public class OrderedList_inArraySlots implements OrderedListInt{
   private List_inArraySlots refToList;
 
   public OrderedList_inArraySlots(){
@@ -11,15 +11,15 @@ public class OrderedList_inArraySlots{
       return val;
     }else{
       for (int i = 0; i < refToList.size(); i++){
-        System.out.println("at index " + i + " element " + refToList.get(i));
-        System.out.println(val);
+        //System.out.println("at index " + i + " element " + refToList.get(i));
+        //System.out.println(val);
         if (refToList.get(i) >= val){
           if (i == 0){
-            System.out.println("added to beginning");
+            //System.out.println("added to beginning");
             refToList.add(0, val);
             return val;
           }else{
-            System.out.println("added to one less than i");
+            //System.out.println("added to one less than i");
             refToList.add(i, val);
             return val;
           }
@@ -41,4 +41,5 @@ public class OrderedList_inArraySlots{
   public int get(int index){
     return refToList.get(index);
   }
+
 }
